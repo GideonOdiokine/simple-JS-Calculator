@@ -22,7 +22,68 @@ body {
   font-size: calc(1rem * 1.2 * 1.2);
 }
 .calculator__keys {
-  background-color: pink;
+  background-color: rgb(231, 231, 231);
   display: grid;
   grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
+}
+.calculator__keys button {
+  border: 0;
+  outline: 1px solid snow;
+  cursor: pointer;
+}
+.one {
+  grid-area: one;
+  height: 40px;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+  height: 40px;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+  height: 40px;
+}
+.eight {
+  grid-area: eight;
+}
+.zero {
+  grid-area: zero;
+  height: 40px;
+}
+.nine {
+  grid-area: nine;
+  height: 40px;
+}
+.equal {
+  grid-area: equal;
+  background-color: #f9703e;
+  height: 100%;
+}
+.decimal {
+  grid-area: decimal;
+}
+
+.plus,
+.times,
+.divide,
+.minus {
+  height: 40px;
 }

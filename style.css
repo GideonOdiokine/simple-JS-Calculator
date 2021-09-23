@@ -13,3 +13,16 @@ body {
 .calculator {
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
 }
+.calculator__display {
+  background-color: #1f2933;
+  color: #fff;
+  width: 16.25rem;
+  padding: 0.72rem 1rem;
+  text-align: right;
+  font-size: calc(1rem * 1.2 * 1.2);
+}
+.calculator__keys {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}

@@ -22,6 +22,7 @@ body {
   font-size: calc(1rem * 1.2 * 1.2);
 }
 .calculator__keys {
+  box-sizing: border-box;
   background-color: rgb(231, 231, 231);
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -33,9 +34,11 @@ body {
     "zero decimal clear equal";
 }
 .calculator__keys button {
-  border: 0;
-  outline: 1px solid snow;
   cursor: pointer;
+}
+.calculator__keys button:focus {
+  background-color: rgb(191, 200, 201);
+  border: 0;
 }
 .one {
   grid-area: one;
@@ -75,15 +78,23 @@ body {
 .equal {
   grid-area: equal;
   background-color: #f9703e;
-  height: 100%;
+  border: 0;
 }
 .decimal {
   grid-area: decimal;
 }
-
 .plus,
 .times,
 .divide,
 .minus {
   height: 40px;
+}
+
+@media (max-width: 800px) {
+  .calculator__display {
+    width: auto;
+  }
+  .container {
+    width: 100%;
+  }
 }
